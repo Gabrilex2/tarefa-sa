@@ -43,7 +43,7 @@ public class Main {
                         }
 
                         System.out.println("\nListagem concluída. O programa será encerrado.");
-                        opcao = 9; // Define a opção como 9 para sair do loop
+                        opcao = 9; 
                         break;
 
                     case 9:
@@ -60,9 +60,9 @@ public class Main {
                 opcao = 0;
             }
 
-        } while (opcao != 9); // Continua até que a opção 9 seja escolhida
+        } while (opcao != 9); 
 
-        scanner.close(); // Fecha o scanner ao sair
+        scanner.close();
         System.out.println("Processo finalizado.");
     }
 }

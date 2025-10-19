@@ -1,38 +1,32 @@
 package org.example;
 
 import java.util.List;
-import java.util.Scanner; // Import necessário para ler a entrada do usuário
+import java.util.Scanner; 
 
 public class Main {
     public static void main(String[] args) {
 
-        // Inicializa a conexão e o DAO
         ConectionSQL conexaoDB = new ConectionSQL();
         ProdutoDAO produtoDAO = new ProdutoDAO(conexaoDB);
 
-        // Inicializa o Scanner
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
         System.out.println("Sistema de E-commerce - Operações");
 
-        // Loop principal do menu
         do {
             System.out.println("\n-------------------------------------");
             System.out.println("1 - Listar Produtos (e Fechar)");
             System.out.println("9 - Sair do Programa");
             System.out.print("Escolha uma opção: ");
 
-            // Tenta ler a opção, tratando possíveis erros de entrada
             try {
                 opcao = scanner.nextInt();
 
-                // Estrutura switch para processar a opção
                 switch (opcao) {
                     case 1:
                         System.out.println("\n--- Listando Produtos do Banco de Dados ---");
 
-                        // Bloco de listagem de produtos (sua lógica anterior)
                         try {
                             List<Produto> listaDeProdutos = produtoDAO.obterListaDeProdutos();
 

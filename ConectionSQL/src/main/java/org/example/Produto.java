@@ -7,14 +7,12 @@ public class Produto {
     private int quantidade;
     private double preco;
 
-    // Construtor Vazio (Boa prática para o DAO)
     public Produto() {
     }
 
-    // Getters e Setters (Mantenha todos)
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
-    // ... (outros getters e setters)
+  
 
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
@@ -28,7 +26,6 @@ public class Produto {
     public double getPreco() { return preco; }
     public void setPreco(double preco) { this.preco = preco; }
 
-    // Método para imprimir a lista
     @Override
     public String toString() {
         return "ID: " + id +
@@ -36,4 +33,5 @@ public class Produto {
                 " | Preço: R$" + String.format("%.2f", preco) +
                 " | Qtd: " + quantidade;
     }
+
 }

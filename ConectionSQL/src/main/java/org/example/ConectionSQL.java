@@ -8,7 +8,7 @@ public class ConectionSQL implements ConexaoBD {
 
     private static final String URL = "jdbc:mysql://localhost:3306/ecommerce";
     private static final String USUARIO = "root";
-    private static final String SENHA = "Gas96815077@"; // troque pela sua senha do MySQL Workbench
+    private static final String SENHA = "Gas96815077@"; 
 
     @Override
     public Connection obterConexao() throws Exception {
@@ -36,4 +36,5 @@ public class ConectionSQL implements ConexaoBD {
             }
         }
     }
+
 }
